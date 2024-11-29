@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Programmer's Oath</title>
+    <style>
+        /* Global Styles */
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            margin: 0;
+            padding: 0;
+            color: white;
+            overflow-x: hidden;
+            text-align: center;
+        }
+        
+        h1,
+        h2 {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        section {
+            padding: 100px 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        
+        section:nth-of-type(1) {
+            animation-delay: 0.5s;
+        }
+        
+        .contact-section {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 800px;
+            margin: 0 auto;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .contact-section:hover {
+            transform: scale(1.05);
+        }
+        
+        .contact-section h2 {
+            color: #ff007b;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        
+        .contact-section p {
+            font-size: 18px;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .back-btn {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(90deg, #ff007b, #00f7ff);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            box-shadow: 0 5px 20px rgba(0, 255, 255, 0.4);
+        }
+        
+        .back-btn:hover {
+            background: linear-gradient(90deg, #00f7ff, #ff007b);
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(255, 0, 123, 0.6);
+        }
+        
+        footer {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #00f7ff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Contact Section -->
+    <section>
+        <h1>The Programmer's Oath</h1>
+        <div class="contact-section">
+            <h2>"As a Programmer"</h2>
+            <p>
+                I am more than a creator of code—I am a problem solver, a visionary, and a builder of the digital future. Every line I write reflects my dedication to turning ideas into reality, transforming challenges into opportunities, and weaving innovation into
+                the fabric of technology. I embrace the complexity of logic, the elegance of simplicity, and the endless potential of collaboration. Through persistence and creativity, I strive to not only develop solutions but to inspire change, leaving
+                a lasting impact in a world increasingly shaped by the power of technology.
+            </p>
+            <button class="back-btn" onclick="goBack()">Back to Main</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2024 Futuristic Portfolio
+    </footer>
+
+    <script>
+        // Function to go back to the main page
+        function goBack() {
+            window.location.href = "index.html"; // Make sure the main page is named 'index.html' or adjust accordingly
+        }
+    </script>
+</body>
+
+</html>

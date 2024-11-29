@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get in Touch</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            text-align: center;
+        }
+        
+        .contact-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        h1 {
+            color: #ff007b;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        
+        .contact-info a {
+            color: #00f7ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .contact-info a:hover {
+            color: #ff007b;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        input,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+        
+        input:focus,
+        textarea:focus {
+            border: 2px solid #ff007b;
+        }
+        
+        button {
+            padding: 15px;
+            font-size: 18px;
+            color: white;
+            background: linear-gradient(90deg, #00f7ff, #ff007b);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            transform: scale(1.1);
+            background: linear-gradient(90deg, #ff007b, #00f7ff);
+        }
+        
+        .back-btn {
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #00f7ff;
+            font-size: 16px;
+        }
+        
+        .back-btn:hover {
+            background: rgba(0, 0, 0, 0.3);
+            color: #ff007b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="contact-container">
+        <h1>Get in Touch</h1>
+        <div class="contact-info">
+            <p>📧 Email: <a href="mailto:markpatrickcaampued1379@gmail.com">markpatrickcaampued1379@gmail.com</a></p>
+            <p>📞 Phone: <a href="tel:+639911449300">0991 144 9300</a></p>
+            <p>🌐 Facebook: <a href="https://www.facebook.com/MarkPatrick" target="_blank">Mark Patrick</a></p>
+        </div>
+
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Back Button -->
+        <button class="back-btn" onclick="goBack()">Back to Main</button>
+    </section>
+
+    <script>
+        // Function to navigate back to the main page
+        function goBack() {
+            window.location.href = "index.html"; // Ensure the main page is named 'index.html' or adjust this link
+        }
+    </script>
+
+</body>
+
+</html>

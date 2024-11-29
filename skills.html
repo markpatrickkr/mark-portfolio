@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+    <style>
+        /* Global Styles */
+        
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            /* Changed font to Roboto */
+            background: url('283836.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        /* Hero Section */
+        
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+        }
+        
+        header h1 {
+            font-size: 3.5rem;
+            /* Increased font size */
+            font-weight: 600;
+            /* Adjusted weight for better visibility */
+            color: #00f7ff;
+            text-shadow: 0 0 15px #00f7ff, 0 0 30px #ff007b;
+            animation: fadeInTitle 1.5s ease-in-out;
+        }
+        
+        @keyframes fadeInTitle {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        header .btn {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            background: linear-gradient(90deg, #00f7ff, #ff007b);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+            box-shadow: 0 5px 20px rgba(0, 255, 255, 0.4);
+        }
+        
+        header .btn:hover {
+            background: linear-gradient(90deg, #ff007b, #00f7ff);
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(255, 0, 123, 0.6);
+        }
+        /* Skills Section */
+        
+        .skills-container {
+            padding: 50px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .skill-card {
+            width: 300px;
+            height: 180px;
+            background: transparent;
+            border: 1px solid rgba(0, 255, 221, 0.6);
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            box-shadow: none;
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
+        }
+        
+        .skill-card h3 {
+            margin: 20px 0;
+            font-size: 28px;
+            /* Increased font size */
+            font-weight: 500;
+            /* Adjusted font weight */
+            color: #ff007b;
+            text-transform: uppercase;
+            transition: color 0.3s, text-shadow 0.3s;
+            letter-spacing: 1px;
+            /* Added letter spacing for better readability */
+        }
+        
+        .skill-card p {
+            font-size: 18px;
+            /* Increased font size */
+            line-height: 1.6;
+            /* Increased line height for better readability */
+            color: #e6e6e6;
+            padding: 0 15px;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+        /* Glow effect on hover */
+        
+        .skill-card:hover h3,
+        .skill-card:hover p {
+            color: #00f7ff;
+            text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 30px #ff007b;
+        }
+        /* Back Button */
+        
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #ff007b;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background-color: #00f7ff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div>
+            <h1>My Futuristic Skills</h1>
+            <button class="btn" onclick="scrollToSkills()">Explore Skills</button>
+        </div>
+    </header>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-container">
+        <div class="skill-card">
+            <h3>Robotics Engineering</h3>
+            <p>Designing and building advanced robotic systems for modern industries.</p>
+        </div>
+        <div class="skill-card">
+            <h3>AI Programming</h3>
+            <p>Creating intelligent algorithms for automation and problem-solving.</p>
+        </div>
+        <div class="skill-card">
+            <h3>Web Development</h3>
+            <p>Developing sleek, interactive websites with cutting-edge technologies.</p>
+        </div>
+        <div class="skill-card">
+            <h3>3D Modeling</h3>
+            <p>Crafting detailed 3D designs for robots and futuristic systems.</p>
+        </div>
+        <div class="skill-card">
+            <h3>Data Science</h3>
+            <p>Analyzing big data to generate valuable insights and drive innovation.</p>
+        </div>
+    </section>
+
+    <!-- Back Button -->
+    <button class="back-btn" onclick="goBack()">Go Back</button>
+
+    <script>
+        // Smooth scroll to skills section
+        function scrollToSkills() {
+            document.getElementById('skills').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Navigate back to the previous page
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>
